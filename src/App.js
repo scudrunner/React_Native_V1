@@ -63,7 +63,7 @@ class App extends Component {
         <FlatList
          data={data} //pass in our data array
          keyExtractor={item => item.ID}
-         //renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
+         renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
         // renderItem = {data => <FlightItemw ID (data.item.value) /> }
         />
       </View>
