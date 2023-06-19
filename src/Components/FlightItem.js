@@ -3,24 +3,16 @@ import { Button, Image, StyleSheet, Text, View } from "react-native";
 import PropTypes from 'prop-types';
 
 
-export default class FlightItemw extends React.Component { 
-  constructor(props) {
-    super(props);
-  }
-  render() { 
-    return (
+const FlightItemw = props => {
+  return (
       <TouchableOpacity onPress={this.props.onPress}>
       <View>
-      <Text style={styles.flightitem}> {this.Props.ID}
+      <Text style={styles.flightitem}> {props.ID}
       </Text> 
       </View> 
       </TouchableOpacity>
     );
   }
-}
-
-CustomText.propTypes = { title: PropTypes.string.isRequired, onPress: PropTypes.func.isRequired };
-
 
 const styles = StyleSheet.create({
   flightitem: {
@@ -31,3 +23,5 @@ const styles = StyleSheet.create({
     margin: 2,
   },
 });
+
+export default FlightItemw;

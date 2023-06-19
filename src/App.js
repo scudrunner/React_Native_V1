@@ -3,6 +3,7 @@ import { Button, Image, StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-web";
 import data from "./Fligths.json";
 
+import FlightItemw from "./Components/FlightItem";
 
 
 
@@ -61,7 +62,9 @@ class App extends Component {
       <View style={styles.mylist}>
         <FlatList
          data={data} //pass in our data array
-         renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
+         keyExtractor={item => item.ID}
+         //renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
+        // renderItem = {data => <FlightItemw ID (data.item.value) /> }
         />
       </View>
     )}
