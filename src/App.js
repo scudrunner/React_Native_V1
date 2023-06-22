@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-web";
-import data from "./fligths.json";
+import data from "./flights.json";
 
  const FlightItem = ({ item }) => {
   //the app will represent each list item via a Text component
@@ -47,6 +47,22 @@ class App extends Component {
           <Text style={styles.text}>Learn how to create a Mobile app with</Text>
           
         </View>
+          <View style={styles.mylist}>
+    {data && (
+      <View style={styles.mylist}>
+        <FlatList
+         data={data} //pass in our data array
+         keyExtractor={item => item.ID}
+         renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
+        // renderItem = {data => <FlightItemw ID (data.item.value) /> }
+        />
+      </View>
+    )}
+    
+  </View>
+        
+        
+        
         <Text style={[styles.text, styles.paragraph]}>
           To get started, edit{" "}
           <Link href="https://codesandbox.io/s/z6x9w4x48p/" style={styles.code}>
