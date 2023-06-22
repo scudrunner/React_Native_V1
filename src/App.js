@@ -1,5 +1,29 @@
 import React, { Component } from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
+import { FlatList } from "react-native-web";
+import data from "./fligths.json";
+
+ const FlightItem = ({ item }) => {
+  //the app will represent each list item via a Text component
+  return (
+  <View style = {styles.flightcard} >
+  
+      
+      <View style ={styles.flightitem}> 
+      <Text> {item.ID}
+           </Text>      
+      </View>             
+     
+      <View style ={styles.flightitem}> 
+      <Text> {item.Days}
+      </Text> 
+      </View>
+ </View>      
+)
+}
+
+
+
 
 
 const Link = (props) => (
