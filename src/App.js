@@ -143,9 +143,8 @@ const styles = StyleSheet.create({
     margin: 2,
   },
   
-  flightcard: {
-    flexdirection : row
-    height : 70,
+  flightcard:{w
+   height : 70,
     width: 500,
     backgroundColor: "red",
     shadowColor: 'black',
