@@ -16,8 +16,8 @@ const FlightItem = ({ item }) => {
   
       
       <View style ={styles.flightitem}> 
-      <Text> {item.ID}           </Text>      </View>           <View style ={styles.flightitem}>      <Text> {item.ID}     </Text>      </View>   
-        
+      <Text> {item.ID}           </Text>      
+      </View>             
      
       <View style ={styles.flightitem}> 
       <Text> {item.Days}
