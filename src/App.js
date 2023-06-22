@@ -11,17 +11,21 @@ const logoUri = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
 
 const FlightItem = ({ item }) => {
   //the app will represent each list item via a Text component
-  return 
+  return (
+  <View style = {styles.flightcard} >
   
-  <Text style={styles.flightitem}> {item.ID}</Text>
-  
-      
-      <View>
-      <Text style={styles.flightitem}> {item.ID}
+  <View style = {styles.picsaver} > </View> 
+  <View> 
+   <Text style={styles.flightitem}> {item.ID}
       </Text> 
-      </View>; 
+     </View> 
       
-      
+       </View>
+       
+  )
+
+
+  
 };
 
 
@@ -138,6 +142,34 @@ const styles = StyleSheet.create({
     padding: 2,
     margin: 2,
   },
+  
+  flightcard: {
+    flexdirection : row
+    height : 70,
+    width: 500,
+    backgroundColor: "red",
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 6,
+    shadowOpacity: 0.26,
+    elevation: 8,
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+  },
+  
+  picsaver: {
+    height:50,
+    width: 50,
+    backgroundcolor: "purple",
+  },
+  
+  data: {
+    height:25,
+    width:70,
+  },
+  
+  
 });
 
 export default App;
