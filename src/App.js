@@ -14,25 +14,19 @@ const FlightItem = ({ item }) => {
   return (
   <View style = {styles.flightcard} >
   
-  <View style = {styles.picsaver} > </View> 
-  <View> 
-   <Text style={styles.flightitem}> {item.ID}
-      </Text> 
-     </View> 
       
-       </View>
-       
-  )
+      <View style ={styles.flightitem}> 
+      <Text> {item.ID}           </Text>      </View>           <View style ={styles.flightitem}>      <Text> {item.ID}     </Text>      </View>   
+        
+     
+      <View style ={styles.flightitem}> 
+      <Text> {item.Days}
+      </Text> 
+      </View> 
 
 
-  
-};
-
-
-const Link = (props) => (
-  <Text
-    {...props}
-    accessibilityRole="link"
+/View
+"link"
     style={StyleSheet.compose(styles.link, props.style)}
   />
 );
@@ -136,7 +130,8 @@ const styles = StyleSheet.create({
     fontFamily: "monospace, monospace"
   },
   flightitem: {
-    textAlign: "center",
+  width: 50,
+     textAlign: "center",
     backgroundColor: "blue",
     color: "white",
     padding: 2,
@@ -146,13 +141,12 @@ const styles = StyleSheet.create({
   flightcard:{
     height : 70,
     width: 500,
-    backgroundColor: "red",
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.26,
-    elevation: 8,
-    backgroundColor: 'white',
+    elevation:18,
+   backgroundColor: 'white',
     padding: 20,
     borderRadius: 10,
   },
