@@ -5,6 +5,19 @@ import data from "./flights.json";
 import FlightItem from "./Components/Flightcard"
 
 
+ const handleImport = () => {
+    console.log("import json from file");
+  }; 
+ const handleOnChange = event => {
+    var reader = new FileReader();
+    reader.readAsText(event.target.files[0]);
+    reader.onload = onReaderLoad;
+  };
+  const onReaderLoad = event => {
+    console.log(event.target.result);
+    console.log(JSON.parse(event.target.result));
+  };
+
 
 
 
@@ -23,7 +36,7 @@ class App extends Component {
         <View style={styles.header}>
           
           <Text style={styles.title}>Changing code here </Text>
-          <Text style={styles.subtitle}>by: Francis Rodrigues</Text>
+          <Text style={styles.subtitle}>by: Pyro</Text>
         </View>
         <View style={styles.mainText}>
           <Text style={styles.text}>Learn how to create a Mobile app with</Text>
@@ -59,6 +72,10 @@ class App extends Component {
           title="Hands-on tutorial"
           style={{ paddingLeft: 15, paddingRight: 15 }}
         />
+        <View>
+        <button onClick={handleImport}>import</button>
+        <input className="import" type="file" onChange={handleOnChange} />
+        </View>
       </View>
     );
   }
