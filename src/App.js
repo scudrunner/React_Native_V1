@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-web";
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import pdfjs from "pdfjs-dist";
+//import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+//import pdfjs from "pdfjs-dist";
 
 
 import data from "./flights.json";
