@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-web";
+
+
 import data from "./flights.json";
 import FlightItem from "./Components/Flightcard"
+import Link from "./Components/link"
 
 
  const handleImport = () => {
@@ -21,13 +24,7 @@ import FlightItem from "./Components/Flightcard"
 
 
 
-const Link = (props) => (
-  <Text
-    {...props}
-    accessibilityRole="link"
-    style={StyleSheet.compose(styles.link, props.style)}
-  />
-);
+
 
 class App extends Component {
   render() {
@@ -108,9 +105,7 @@ const styles = StyleSheet.create({
   paragraph: {
     marginVertical: "1em"
   },
-  link: {
-    color: "#1B95E0"
-  },
+ 
   code: {
     fontFamily: "monospace, monospace"
   },
