@@ -4,21 +4,30 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "dependencies": {
+ "dependencies": {
+    "axios": "0.19.0",
     "leaflet": "1.9.3",
-    "react": "17.0.2",
-    "react-art": "17.0.2",
-    "react-dom": "17.0.2",
+    "metro": "0.56.0",
+    "metro-react-native-babel-preset": "0.56.0",
+    "pdfjs-dist": "3.5.141",
+    "react": "16.4.0",
+    "react-art": "16.4.0",
+    "react-dom": "16.4.0",
     "react-leaflet": "4.2.1",
-    "react-native-web": "0.16.1",
-    "react-scripts": "^1.1.5"
+    "react-native-flexbox-grid": "0.3.2",
+    "react-native-vector-icons": "5.0.0",
+    "react-native-web": "0.8.x",
+    "react-navigation": "2.11.2",
+    "react-scripts": "1.1.4"
   },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
