@@ -7,17 +7,27 @@ import data from "./flights.json";
   //the app will represent each list item via a Text component
   return (
   <View style = {styles.flightcard} >
-  
-      
-      <View style ={styles.flightitem}> 
-      <Text> {item.ID}
-           </Text>      
-      </View>             
-     
-      <View style ={styles.flightitem}> 
-      <Text> {item.Days}
-      </Text> 
-      </View>
+      <View style = {styles.test} >
+          <View style={[styles.picsaver, {backgroundColor: '#e0ffff'}]} />
+          <View style ={styles.flightitem}> 
+          <Text style ={styles.flightText} > {item.ID}
+              </Text>      
+          </View>             
+        
+          <View style ={styles.flightitem}> 
+          <Text style ={styles.flightText}  > {item.Days}
+          </Text> 
+          </View>
+          <View>
+          {item.legs.map((item)=>(
+              <Text >
+                {item.flight} {'  '}
+                {item.From} {'  '}
+                {item.To}
+              </Text>
+              ))}
+          </View>
+    </View>  
  </View>      
 )
 }
@@ -48,14 +58,14 @@ class App extends Component {
           
         </View>
           <View style={styles.mylist}>
-    {data && (
-      <View style={styles.mylist}>
-        <FlatList
-         data={data} //pass in our data array
-         keyExtractor={item => item.ID}
-         renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
-        // renderItem = {data => <FlightItemw ID (data.item.value) /> }
-        />
+            {data && (
+              <View style={styles.mylist}>
+                <FlatList
+                  data={data} //pass in our data array
+                  keyExtractor={item => item.ID}
+                  renderItem={FlightItem} //tell React to use our renderItem function that we defined earlier
+                  // renderItem = {data => <FlightItemw ID (data.item.value) /> }
+                />
       </View>
     )}
     
@@ -121,31 +131,39 @@ const styles = StyleSheet.create({
     fontFamily: "monospace, monospace"
   },
   flightitem: {
-  width: 50,
-     textAlign: "center",
-    backgroundColor: "blue",
-    color: "white",
+    width: 50,
+    height: 30,
+    textAlign: "center",
+    backgroundColor: "skyblue",
+    
     padding: 2,
     margin: 2,
   },
+  flightText: {
+    color: "white",  
+  },
   
   flightcard:{
-    height : 70,
+    
     width: 500,
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.26,
     elevation:18,
-   backgroundColor: 'white',
-    padding: 20,
+    backgroundColor: 'white',
+    padding: 20, 
     borderRadius: 10,
   },
+  test : {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    
+  }, 
   
   picsaver: {
     height:50,
     width: 50,
-    backgroundcolor: "purple",
   },
   
   data: {
